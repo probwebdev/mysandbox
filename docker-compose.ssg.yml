@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  mywebentry:
+    image: mywebentry/${PROJECT_NAME}:ssg
+    build:
+      context: ./
+      dockerfile: ./docker/mywebentry/ssg.Dockerfile
+      args:
+        - IMAGE_VER=${IMAGE_VER}
+        - PACKAGE=${PROJECT_NAME}
+    environment:
+      PNPM_VER: ${PNPM_VER}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mywebentry.entrypoints=web"
+      - "traefik.http.routers.mywebentry.rule=Host(`mywebentry.docker`, `www.mywebentry.docker`)"
+      - "traefik.http.services.mywebentry.loadbalancer.server.port=80"

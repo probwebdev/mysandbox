@@ -1,0 +1,15 @@
+.vscode
+.idea
+.git
+.yarn
+.husky
+.pnpm-store
+*.log
+
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Project
+apps
+node_modules

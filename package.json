@@ -1,0 +1,72 @@
+{
+  "private": true,
+  "name": "mysandbox",
+  "description": "Personal Sandbox",
+  "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
+  "version": "1.1.0",
+  "bugs": "https://github.com/robertgorbul/mysandbox/issues",
+  "license": "MIT",
+  "keywords": [
+    "reactjs",
+    "nextjs",
+    "tailwindcss",
+    "framermotion",
+    "typescript",
+    "portfolio",
+    "monorepo"
+  ],
+  "scripts": {
+    "postinstall": "husky install",
+    "browserslist": "pnpm dlx browserslist@latest --update-db",
+    "dev": "pnpm --filter=@mywebentry/vanilla-extract dev",
+    "start": "pnpm --filter=@mywebentry/vanilla-extract start",
+    "export": "pnpm turbo run export",
+    "build": "pnpm turbo run build",
+    "test:unit:coverage": "pnpm turbo run test:unit:coverage",
+    "test:unit": "pnpm turbo run test:unit",
+    "lint:format": "pnpm turbo run lint:format",
+    "lint:css": "pnpm turbo run lint:css",
+    "lint:js": "pnpm turbo run lint:js",
+    "compose:dev": "docker compose -f docker-compose.yml -f docker-compose.override.yml",
+    "compose:server": "docker compose -f docker-compose.yml -f docker-compose.server.yml",
+    "compose:ssg": "docker compose -f docker-compose.yml -f docker-compose.ssg.yml"
+  },
+  "devDependencies": {
+    "@mywebentry/eslint-config": "workspace:^1.0.0",
+    "@mywebentry/lint-staged-config": "workspace:^1.0.0",
+    "@mywebentry/prettier-config": "workspace:^1.0.0",
+    "eslint": "~8.22.0",
+    "husky": "~8.0.1",
+    "lint-staged": "~13.0.3",
+    "prettier": "~2.7.1",
+    "stylelint": "~14.10.0",
+    "turbo": "^1.4.3",
+    "typescript": "~4.7.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint",
+        "prettier",
+        "stylelint"
+      ],
+      "allowedVersions": {
+        "react": "18",
+        "react-dom": "18",
+        "@types/react": "18"
+      }
+    }
+  },
+  "packageManager": "pnpm@7.9.3",
+  "engines": {
+    "node": ">=16.15.0",
+    "pnpm": ">=7.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertgorbul/mysandbox"
+  },
+  "volta": {
+    "node": "16.17.0"
+  }
+}

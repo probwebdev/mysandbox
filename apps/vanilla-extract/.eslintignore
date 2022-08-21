@@ -1,0 +1,9 @@
+out
+.next
+.eslintrc.js
+*.config.js
+*.setup.js
+*Mock.js
+coverage
+next-env.d.ts
+node_modules

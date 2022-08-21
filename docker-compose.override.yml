@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+
+  mywebentry:
+    image: mywebentry/${PROJECT_NAME}:dev
+    build:
+      context: ./
+      dockerfile: ./docker/mywebentry/dev.Dockerfile
+      args:
+        - IMAGE_VER=${IMAGE_VER}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mywebentry.entrypoints=web"
+      - "traefik.http.routers.mywebentry.rule=Host(`dev.mywebentry.docker`, `www.dev.mywebentry.docker`)"
+      - "traefik.http.services.mywebentry.loadbalancer.server.port=3000"
+    environment:
+      PNPM_VER: ${PNPM_VER}
+      PROJECT_UID: ${PROJECT_UID}
+      PROJECT_GID: ${PROJECT_GID}
+    volumes:
+      - ./:/home/node/app
+      - node_modules:/home/node/app/node_modules
+      - pnpm_store:/home/node/app/.pnpm_store
+
+volumes:
+  node_modules:
+  pnpm_store:

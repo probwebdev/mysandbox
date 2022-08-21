@@ -1,0 +1,9 @@
+*.log
+coverage
+
+# Project
+.next
+.turbo
+.swc
+out
+node_modules

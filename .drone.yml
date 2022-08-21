@@ -1,0 +1,187 @@
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: restore-cache
+    image: meltwater/drone-cache
+    settings:
+      backend: filesystem
+      restore: true
+      cache_key: '{{ .Commit.Branch }}'
+      filesystem_cache_root: '/var/lib/cache'
+      mount:
+        - '.pnpm-store'
+        - 'node_modules/.pnpm'
+        - 'node_modules/.cache/turbo'
+    volumes:
+      - name: cache
+        path: '/var/lib/cache'
+    when:
+      branch:
+        - main
+        - feature/*
+
+  - name: bootstrap
+    image: ghcr.io/probwebdev/docker-build-base:16-slim@sha256:c7a907053a69f6cfbe4c50302e001c1fcc44e69e8462043fecd21f7852560107
+    pull: always
+    environment:
+      HUSKY: 0
+    commands:
+      - pnpm config set store-dir .pnpm-store
+      - pnpm store prune
+      - pnpm install
+    depends_on:
+      - restore-cache
+
+  - name: lint
+    image: ghcr.io/probwebdev/docker-build-base:16-slim@sha256:c7a907053a69f6cfbe4c50302e001c1fcc44e69e8462043fecd21f7852560107
+    commands:
+      - pnpm lint:css
+      - pnpm lint:format
+      - pnpm lint:js
+    depends_on:
+      - bootstrap
+
+  - name: tests
+    image: ghcr.io/probwebdev/docker-build-base:16-slim@sha256:c7a907053a69f6cfbe4c50302e001c1fcc44e69e8462043fecd21f7852560107
+    commands:
+      - pnpm test:unit:coverage
+    depends_on:
+      - bootstrap
+
+  - name: build
+    image: ghcr.io/probwebdev/docker-build-base:16-slim@sha256:c7a907053a69f6cfbe4c50302e001c1fcc44e69e8462043fecd21f7852560107
+    commands:
+      - pnpm export
+    depends_on:
+      - lint
+      - tests
+
+  - name: rebuild-cache
+    image: meltwater/drone-cache
+    settings:
+      backend: filesystem
+      rebuild: true
+      cache_key: '{{ .Commit.Branch }}'
+      filesystem_cache_root: '/var/lib/cache'
+      mount:
+        - '.pnpm-store'
+        - 'node_modules/.pnpm'
+        - 'node_modules/.cache/turbo'
+    volumes:
+      - name: cache
+        path: '/var/lib/cache'
+    when:
+      branch:
+        - main
+        - feature/*
+      event:
+        - push
+    depends_on:
+      - build
+
+  - name: publish-dev
+    image: plugins/docker
+    settings:
+      context: ./
+      build_args:
+        - PACKAGE=vanilla-extract
+      pull_image: true
+      purge: true
+      registry:
+        from_secret: registry_url
+      repo:
+        from_secret: registry_repo
+      username:
+        from_secret: registry_username
+      password:
+        from_secret: registry_password
+      tags:
+        - latest
+        - dev
+    when:
+      event:
+        - promote
+        - rollback
+      target:
+        - dev
+    depends_on:
+      - build
+
+  - name: publish
+    image: plugins/docker
+    settings:
+      context: ./
+      build_args:
+        - PACKAGE=tailwindcss
+      pull_image: true
+      purge: true
+      registry:
+        from_secret: registry_url
+      repo:
+        from_secret: registry_repo
+      username:
+        from_secret: registry_username
+      password:
+        from_secret: registry_password
+      tags:
+        - stable
+    when:
+      event:
+        - promote
+        - rollback
+      target:
+        - stable
+    depends_on:
+      - build
+
+  - name: discord
+    image: plugins/webhook
+    settings:
+      urls:
+        from_secret: discord_webhook_url
+      content_type: application/json
+      template: |
+        {
+          "content": "**{{repo.name}}** pipeline event on **{{build.branch}}** branch:",
+          "embeds": [
+            {
+              "title": "{{build.sender}}",
+              "description": "**[#{{build.number}}: {{trim build.message}}]({{build.link}})**",
+              "color": {{#success build.status}}3650686{{else}}16734000{{/success}},
+              "fields": [
+                { "name": "Status", "value": "{{uppercasefirst build.status}} {{#success build.status}}:tada:{{else}}:poop:{{/success}}" },
+                { "name": "Event", "value": "{{build.event}} {{build.target}}" },
+                { "name": "Build time", "value": "{{since build.started}}" }
+              ]
+            }
+          ]
+        }
+    when:
+      status:
+        - success
+        - failure
+    depends_on:
+      - build
+      - publish-dev
+      - publish
+
+trigger:
+  event:
+    - push
+    - pull_request
+    - promote
+    - rollback
+
+image_pull_secrets:
+  - dockerconfig
+
+volumes:
+  - name: cache
+    host:
+      path: '/var/lib/cache'

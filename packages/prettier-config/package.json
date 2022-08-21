@@ -1,0 +1,16 @@
+{
+  "name": "@mywebentry/prettier-config",
+  "description": "Custom Prettier config",
+  "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
+  "version": "1.0.0",
+  "bugs": "https://github.com/robertgorbul/mysandbox/issues",
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "main": "index.js",
+  "peerDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

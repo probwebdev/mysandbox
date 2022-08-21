@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  mywebentry:
+    image: mywebentry/${PROJECT_NAME}:server
+    build:
+      context: ./
+      dockerfile: ./docker/mywebentry/server.Dockerfile
+      args:
+        - IMAGE_VER=${IMAGE_VER}
+    environment:
+      PNPM_VER: ${PNPM_VER}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mywebentry.entrypoints=web"
+      - "traefik.http.routers.mywebentry.rule=Host(`mywebentry.docker`, `www.mywebentry.docker`)"
+      - "traefik.http.services.mywebentry.loadbalancer.server.port=3000"

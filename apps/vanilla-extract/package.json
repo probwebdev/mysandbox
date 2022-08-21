@@ -1,0 +1,73 @@
+{
+  "private": true,
+  "name": "@mywebentry/vanilla-extract",
+  "description": "Personal Webpage with Vanilla Extract CSS",
+  "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
+  "version": "0.1.0",
+  "bugs": "https://github.com/robertgorbul/mysandbox/issues",
+  "license": "Apache-2.0",
+  "keywords": [
+    "reactjs",
+    "nextjs",
+    "vanilla-extract",
+    "framer-motion",
+    "typescript",
+    "portfolio"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "export": "next build && next export",
+    "build": "next build",
+    "build:analyze": "ANALYZE=true pnpm build",
+    "test:unit:coverage": "jest --coverage --passWithNoTests",
+    "test:unit": "jest --passWithNoTests",
+    "lint:format": "prettier --check './**/*.{js,jsx,ts,tsx,md,mdx,html,css,json}'",
+    "lint:js": "eslint './**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "framer-motion": "~7.2.0",
+    "next": "~12.2.5",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
+  },
+  "devDependencies": {
+    "@mywebentry/eslint-config": "workspace:^1.0.0",
+    "@mywebentry/lint-staged-config": "workspace:^1.0.0",
+    "@mywebentry/prettier-config": "workspace:^1.0.0",
+    "@next/bundle-analyzer": "~12.2.5",
+    "@next/eslint-plugin-next": "~12.2.5",
+    "@swc/core": "^1.2.241",
+    "@swc/jest": "^0.2.22",
+    "@testing-library/dom": "^8.17.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/css-font-loading-module": "^0.0.7",
+    "@types/jest": "^28.1.7",
+    "@types/node": "^18.7.6",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vanilla-extract/css": "^1.7.2",
+    "@vanilla-extract/next-plugin": "^2.0.2",
+    "@vanilla-extract/recipes": "^0.2.5",
+    "@vanilla-extract/sprinkles": "^1.4.1",
+    "eslint-config-next": "~12.2.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "typescript": "~4.7.4",
+    "webpack": "^5.74.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.5%",
+    "Firefox ESR",
+    "not ie <= 11",
+    "not dead"
+  ],
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

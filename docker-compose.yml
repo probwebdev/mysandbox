@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  traefik:
+    image: traefik:2.8
+    ports:
+      - "80:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.entrypoints=web"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.mywebentry.docker`, `www.traefik.mywebentry.docker`)"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./docker/traefik/traefik.yml:/traefik.yml
+      - ./docker/traefik/logs:/var/log/traefik
