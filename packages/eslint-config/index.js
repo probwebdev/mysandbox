@@ -11,7 +11,7 @@ const common = {
   },
   settings: {
     jest: {
-      version: 27,
+      version: 29,
     },
   },
   extends: [
