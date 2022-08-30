@@ -28,7 +28,7 @@ export const Seo = ({
         content="initial-scale=1.0, width=device-width, shrink-to-fit=no"
       />
       <link rel="shortcut icon" href="/favicon.png" />
-      <title>{title} | probablyweb.dev</title>
+      <title>{`${title} | probablyweb.dev`}</title>
       <meta name="theme-color" content="#09c" />
       <meta name="description" content={description} />
       {pageMeta?.length &&
