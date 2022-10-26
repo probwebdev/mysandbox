@@ -9,18 +9,6 @@
       "dependsOn": ["^export"],
       "outputs": [".next/**", "out/**"]
     },
-    "test:unit:coverage": {
-      "inputs": [
-        "./src/**/__tests__/**/*.test.ts",
-        "./src/**/__tests__/**/*.test.tsx",
-        "./src/**/__tests__/../*.ts",
-        "./src/**/__tests__/../*.tsx",
-        "./**/mocks/**/*js",
-        "./jest.config.js",
-        "./config/jest.setup.js"
-      ],
-      "outputs": ["coverage/**"]
-    },
     "lint:js": {
       "inputs": ["./**/*.js", "./**/*.ts", "./**/*.tsx"],
       "outputs": []

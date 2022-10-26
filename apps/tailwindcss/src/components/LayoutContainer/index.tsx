@@ -5,9 +5,9 @@ import type { PropsWithChildren } from '~types';
 export const LayoutContainer = ({
   children,
 }: PropsWithChildren): JSX.Element => (
-  <div className="layout flex min-h-screen flex-col bg-primary">
+  <div className="layout flex min-h-screen flex-col">
     <ContentContainer>
-      <div className="overflow-hidden text-center shadow-outer mt-10-vru sm:rounded">
+      <div className="overflow-hidden text-center">
         <main>{children}</main>
       </div>
     </ContentContainer>

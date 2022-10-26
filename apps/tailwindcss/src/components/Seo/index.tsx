@@ -29,7 +29,7 @@ export const Seo = ({
       />
       <link rel="shortcut icon" href="/favicon.png" />
       <title>{`${title} | probablyweb.dev`}</title>
-      <meta name="theme-color" content="#09c" />
+      <meta name="theme-color" content="#fff" />
       <meta name="description" content={description} />
       {pageMeta?.length &&
         pageMeta.map((item) => <meta key={item.content} {...item} />)}

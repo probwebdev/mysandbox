@@ -10,13 +10,12 @@ const common = {
     node: true,
   },
   settings: {
-    jest: {
-      version: 29,
+    react: {
+      version: 'detect',
     },
   },
   extends: [
-    'airbnb',
-    'airbnb/hooks',
+    'standard',
     'prettier',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -105,11 +104,16 @@ const typescript = {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
   },
   plugins: [...common.plugins, '@typescript-eslint'],
   extends: [
     ...common.extends,
-    'airbnb-typescript',
+    'standard-with-typescript',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],

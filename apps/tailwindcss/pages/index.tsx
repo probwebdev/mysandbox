@@ -18,13 +18,13 @@ const IndexPage = ({ links }: IndexPageProps): JSX.Element => (
   <LayoutContainer>
     <Seo title="Welcome" />
     <div>
-      <div className="m-0 bg-light1 px-5 text-center tracking-tighter xxl:px-16">
-        <div className="m-0 bg-light1 text-center py-1-vru xxl:py-1-vru-xxl">
+      <div className="m-0 px-5 text-center tracking-tighter xxl:px-16">
+        <div className="m-0 text-center py-1-vru xxl:py-1-vru-xxl">
           <h1 className="m-0 text-h2 xxl:text-h2-xxl">Robert Harbul</h1>
-          <p className="text-h6 xxl:text-h6-xxl">Front-End Engineer</p>
+          <p className="text-h6 xxl:text-h6-xxl">Software Engineer</p>
         </div>
       </div>
-      <div className="flex-auto bg-light2 px-5 shadow-inner xxl:px-16">
+      <div className="flex-auto px-5 xxl:px-16">
         <section className="flex flex-row items-center justify-center py-1-vru xxl:py-1-vru-xxl">
           {links.map((item) => (
             <a
@@ -52,10 +52,10 @@ const IndexPage = ({ links }: IndexPageProps): JSX.Element => (
           ))}
         </section>
       </div>
-      <div className="bg-light3 tracking-tight shadow-inner">
+      <div className="tracking-tight">
         <div className="px-5 text-center py-1-vru xxl:px-16 xxl:py-1-vru-xxl">
           ©{new Date().getFullYear()}, Built by{' '}
-          <span className="font-semibold">@robertgorbul</span> with{' '}
+          <span className="font-semibold">@probwebdev</span> with{' '}
           <a
             href="https://nextjs.org/"
             aria-label="Next.js by Vercel - The React Framework"
@@ -84,7 +84,7 @@ export async function getStaticProps(): Promise<{ props: IndexPageProps }> {
         },
         {
           label: 'LinkedIn Profile',
-          url: 'https://linkedin.com/in/robert-gorbul-66a77348',
+          url: 'https://www.linkedin.com/in/robert-harbul-66a77348/',
           icon: {
             path: 'm128 112c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 80h96v288h-96zm160 0h88.553v45.391h1.266c12.32-22.097 42.479-45.391 87.421-45.391 93.473 0 110.76 58.188 110.76 133.87v154.13h-92.305v-136.64c0-32.592-0.667-74.513-48.014-74.513-48.074 0-55.41 35.493-55.41 72.146v139.01h-92.271z',
             colorClassname: 'text-social-linkedin',

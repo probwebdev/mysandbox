@@ -15,8 +15,8 @@ export const FontFaceLoader = ({
     (async (): Promise<void> => {
       try {
         await Promise.all(
-          typefaces.map(async (name) =>
-            document.fonts.load(`normal 1em ${name}`)
+          typefaces.map(
+            async (name) => await document.fonts.load(`normal 1em ${name}`)
           )
         );
 
