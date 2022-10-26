@@ -13,7 +13,6 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   experimental: {
-    browsersListForSwc: true,
     legacyBrowsers: false,
   },
 };
