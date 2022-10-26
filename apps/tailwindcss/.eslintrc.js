@@ -10,4 +10,12 @@ module.exports = {
     'import/extensions': [0, 'never', { css: 'always' }],
     'tailwindcss/no-custom-classname': 0,
   },
+  overrides: [
+    {
+      files: ['./pages/**/*.{ts,tsx}', '*.d.ts'],
+      rules: {
+        'import/no-default-export': 0,
+      },
+    },
+  ],
 };

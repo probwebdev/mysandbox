@@ -5,4 +5,12 @@ module.exports = {
   rules: {
     'import/no-extraneous-dependencies': [2, { packageDir: __dirname }],
   },
+  overrides: [
+    {
+      files: ['./pages/**/*.{ts,tsx}', '*.d.ts'],
+      rules: {
+        'import/no-default-export': 0,
+      },
+    },
+  ],
 };

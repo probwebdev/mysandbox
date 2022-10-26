@@ -163,15 +163,5 @@ const tests = {
 
 module.exports = {
   ...common,
-  overrides: [
-    typescript,
-    javascript,
-    tests,
-    {
-      files: ['./pages/**/*.{ts,tsx}', '*.d.ts'],
-      rules: {
-        'import/no-default-export': 0,
-      },
-    },
-  ],
+  overrides: [typescript, javascript, tests],
 };
