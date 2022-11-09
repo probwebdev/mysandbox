@@ -11,9 +11,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        brand: ['"IBM Plex Sans Variable"', 'sans-serif'],
-        text: ['"Inter Variable"', 'sans-serif'],
-        code: ['"JetBrains Mono Variable"', 'monospace'],
+        brand: 'var(--brand-font)',
+        text: 'var(--text-font)',
+        code: 'var(--code-font)',
       },
       fontSize: {
         root: {

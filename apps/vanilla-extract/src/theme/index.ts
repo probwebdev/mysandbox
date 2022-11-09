@@ -1,9 +1,7 @@
-import { typefaces } from './styles';
-
-import type { Typefaces } from './styles';
+import { typefaces, classNames } from './styles';
 
 export interface ThemeFonts {
-  typefaces: Typefaces;
+  typefaces: string[];
   classNames: string[];
 }
 
@@ -16,6 +14,6 @@ export { vars } from './styles';
 export const theme: Theme = {
   fonts: {
     typefaces,
-    classNames: ['fonts-loaded'],
+    classNames,
   },
 };

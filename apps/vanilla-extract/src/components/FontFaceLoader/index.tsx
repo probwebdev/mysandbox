@@ -8,16 +8,15 @@ export const FontFaceLoader = ({
   children,
 }: PropsWithChildren): JSX.Element => {
   const {
-    fonts: { typefaces, classNames },
+    fonts: { typefaces = [], classNames },
   } = useTheme();
 
   useEffect(() => {
     (async (): Promise<void> => {
       try {
         await Promise.all(
-          Object.entries(typefaces).map(
-            async ([, name]: [string, string]) =>
-              await document.fonts.load(`normal 1em ${name}`)
+          typefaces.map(
+            async (name) => await document.fonts.load(`normal 1em ${name}`)
           )
         );
 

@@ -1,7 +1,5 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
-import { typefaces } from './typefaces';
-
 export const vars = createGlobalTheme(':root', {
   color: {
     primary: '#09c',
@@ -18,8 +16,8 @@ export const vars = createGlobalTheme(':root', {
     linkedin: '#0177b5',
   },
   font: {
-    brand: `"${typefaces.brand}"`,
-    text: `"${typefaces.text}"`,
-    mono: `"${typefaces.mono}"`,
+    brand: `var(--brand-font)`,
+    text: `var(--text-font)`,
+    code: `var(--code-font)`,
   },
 });

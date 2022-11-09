@@ -3,6 +3,9 @@
 */
 
 :root {
+  --brand-font: theme('fontFamily.sans');
+  --text-font: theme('fontFamily.sans');
+  --code-font: theme('fontFamily.mono');
   --text-root-size: theme('fontSize.root.base');
   --text-body-color: theme('colors.dark2');
   --baseline: theme('lineHeight.baseline.base');
@@ -90,8 +93,8 @@ h6 {
   }
 }
 
-.fonts-loaded {
-  @apply font-text;
+:where(.fonts-loaded) {
+  font-family: var(--text-font);
 
   & h1,
   & h2,
@@ -99,12 +102,11 @@ h6 {
   & h4,
   & h5,
   & h6 {
-    @apply font-brand;
+    font-family: var(--brand-font);
   }
 
   & code {
-    @apply font-code;
-
+    font-family: var(--code-font);
     font-weight: 500;
     font-variant-ligatures: normal;
   }

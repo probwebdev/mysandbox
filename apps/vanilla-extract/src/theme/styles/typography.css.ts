@@ -1,13 +1,11 @@
 import { globalStyle } from '@vanilla-extract/css';
 
-import { typefaces } from './typefaces';
-
-globalStyle('.fonts-loaded', {
-  fontFamily: `"${typefaces.text}"`,
+globalStyle(':where(.fonts-loaded)', {
+  fontFamily: 'var(--text-font)',
 });
 
-globalStyle('.fonts-loaded pre, .fonts-loaded code', {
-  fontFamily: `"${typefaces.mono}"`,
+globalStyle(':where(.fonts-loaded pre, .fonts-loaded code)', {
+  fontFamily: 'var(--code-font)',
   fontWeight: 500,
   fontVariantLigatures: 'normal',
 });
