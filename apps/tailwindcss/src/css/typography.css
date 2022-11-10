@@ -32,63 +32,58 @@ body {
   font-size: 1em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:where(h1, h2, h3, h4, h5, h6) {
   font-weight: bold;
   margin-right: 0;
   margin-left: 0;
 }
 
-h1 {
+:where(h1) {
   @apply mb-0 text-h1 mt-h1;
 }
 
-h2 {
+:where(h2) {
   @apply mb-0 text-h2 mt-h2;
 }
 
-h3 {
+:where(h3) {
   @apply mb-0 text-h3 mt-h3;
 }
 
-h4 {
+:where(h4) {
   @apply mb-0 text-h4 mt-h4;
 }
 
-h5 {
+:where(h5) {
   @apply mb-0 text-h5 mt-h5;
 }
 
-h6 {
+:where(h6) {
   @apply mb-0 text-h6 mt-h6;
 }
 
 @screen xxl {
-  h1 {
+  :where(h1) {
     @apply text-h1-xxl mt-h1-xxl;
   }
 
-  h2 {
+  :where(h2) {
     @apply text-h2-xxl mt-h2-xxl;
   }
 
-  h3 {
+  :where(h3) {
     @apply text-h3-xxl mt-h3-xxl;
   }
 
-  h4 {
+  :where(h4) {
     @apply text-h4-xxl mt-h4-xxl;
   }
 
-  h5 {
+  :where(h5) {
     @apply text-h5-xxl mt-h5-xxl;
   }
 
-  h6 {
+  :where(h6) {
     @apply text-h6-xxl mt-h6-xxl;
   }
 }

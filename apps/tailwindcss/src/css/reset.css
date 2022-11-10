@@ -1,71 +1,45 @@
-*,
-*::before,
-*::after {
+:where(*, *::before, *::after) {
   box-sizing: border-box;
 }
 
-* {
+:where(*) {
   margin: 0;
 }
 
-html,
-body {
+:where(html, body) {
   height: 100%;
 }
 
-body {
+:where(body) {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+:where(img, picture, video, canvas, svg) {
   display: block;
   max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
+:where(input, button, textarea, select) {
   font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:where(p, h1, h2, h3, h4, h5, h6) {
   overflow-wrap: break-word;
 }
 
-#root,
-#__next {
+:where(#root, #__next) {
   isolation: isolate;
 }
 
-body,
-blockquote,
-dl,
-dd,
-figure,
-p,
-pre {
+:where(body, blockquote, dl, dd, figure, p, pre) {
   margin: 0;
 }
 
-textarea {
+:where(textarea) {
   font-size: inherit;
 }
 
-pre,
-code,
-kbd,
-samp {
+:where(pre, code, kbd, samp) {
   @apply font-mono text-base;
 }

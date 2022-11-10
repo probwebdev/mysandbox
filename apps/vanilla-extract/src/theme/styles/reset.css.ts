@@ -1,51 +1,51 @@
 import { globalStyle } from '@vanilla-extract/css';
 
-globalStyle('*, *::before, *::after', {
+globalStyle(':where(*, *::before, *::after)', {
   boxSizing: 'border-box',
 });
 
-globalStyle('*', {
+globalStyle(':where(*)', {
   margin: 0,
   fontVariationSettings: '"slnt" 0',
 });
 
-globalStyle('html', {
+globalStyle(':where(html)', {
   MozTextSizeAdjust: 'none',
   WebkitTextSizeAdjust: 'none',
   textSizeAdjust: 'none',
 });
 
-globalStyle('html, body', {
+globalStyle(':where(html, body)', {
   height: '100%',
 });
 
-globalStyle('body', {
+globalStyle(':where(body)', {
   lineHeight: '1.5',
   WebkitFontSmoothing: 'antialiased',
 });
 
-globalStyle('img, picture, video, canvas, svg', {
+globalStyle(':where(img, picture, video, canvas, svg)', {
   display: 'block',
   maxWidth: '100%',
 });
 
-globalStyle('input, button, textarea, select', {
+globalStyle(':where(input, button, textarea, select)', {
   font: 'inherit',
 });
 
-globalStyle('p, h1, h2, h3, h4, h5, h6', {
+globalStyle(':where(p, h1, h2, h3, h4, h5, h6)', {
   overflowWrap: 'break-word',
 });
 
-globalStyle('#root, #__next', {
+globalStyle(':where(#root, #__next)', {
   isolation: 'isolate',
 });
 
-globalStyle('textarea', {
+globalStyle(':where(textarea)', {
   fontSize: 'inherit',
 });
 
-globalStyle('pre, code, kbd, samp', {
+globalStyle(':where(pre, code, kbd, samp)', {
   fontFamily: 'monospace',
   fontSize: '1rem',
   lineHeight: '1.5',
