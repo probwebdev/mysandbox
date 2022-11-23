@@ -30,13 +30,13 @@
     "compose:ssg": "docker compose -f docker-compose.yml -f docker-compose.ssg.yml"
   },
   "devDependencies": {
-    "@mywebentry/eslint-config": "workspace:^1.2.2",
+    "@mywebentry/eslint-config": "workspace:^1.2.3",
     "@mywebentry/lint-staged-config": "workspace:^1.0.0",
     "@mywebentry/prettier-config": "workspace:^1.0.0",
-    "eslint": "^8.27.0",
+    "eslint": "^8.28.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.0",
     "stylelint": "^14.15.0",
     "turbo": "^1.6.3",
     "typescript": "~4.9.3"

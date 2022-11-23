@@ -27,13 +27,13 @@
   "dependencies": {
     "@next/font": "~13.0.4",
     "classnames": "^2.3.2",
-    "framer-motion": "~7.6.7",
+    "framer-motion": "~7.6.9",
     "next": "~13.0.4",
     "react": "~18.2.0",
     "react-dom": "~18.2.0"
   },
   "devDependencies": {
-    "@mywebentry/eslint-config": "workspace:^1.2.2",
+    "@mywebentry/eslint-config": "workspace:^1.2.3",
     "@mywebentry/lint-staged-config": "workspace:^1.0.0",
     "@mywebentry/prettier-config": "workspace:^1.0.0",
     "@next/bundle-analyzer": "~13.0.4",

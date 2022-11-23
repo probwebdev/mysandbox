@@ -2,7 +2,7 @@
   "name": "@mywebentry/eslint-config",
   "description": "Custom ESLint config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "bugs": "https://github.com/robertgorbul/mysandbox/issues",
   "license": "MIT",
   "keywords": [
@@ -12,8 +12,8 @@
   "main": "index.js",
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
@@ -25,15 +25,15 @@
     "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
     "typescript": "^4.9.3"
   },
   "peerDependencies": {
-    "eslint": "^8.24.0",
-    "prettier": "^2.7.1",
+    "eslint": "^8.28.0",
+    "prettier": "^2.8.0",
     "typescript": "^4.9.3"
   },
   "peerDependenciesMeta": {
