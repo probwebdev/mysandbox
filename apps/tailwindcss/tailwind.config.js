@@ -46,6 +46,7 @@ module.exports = {
           instagram: '#b33391',
           github: '#333',
           linkedin: '#0177b5',
+          mastodon: '#5A48DD',
         },
       },
       boxShadow: {
