@@ -27,6 +27,10 @@ export const Seo = ({
         name="viewport"
         content="initial-scale=1.0, width=device-width, shrink-to-fit=no"
       />
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content="default-src 'self' vitals.vercel-insights.com; img-src https://*; child-src 'none';"
+      />
       <link rel="shortcut icon" href="/favicon.png" />
       <title>{`${title} | probablyweb.dev`}</title>
       <meta name="theme-color" content="#fff" />
