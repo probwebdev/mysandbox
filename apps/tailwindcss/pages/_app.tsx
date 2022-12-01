@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import { FontFaceLoader } from '~components/FontFaceLoader';
 import { ThemeProvider } from '~theme/ThemeProvider';
 
@@ -9,6 +11,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <ThemeProvider>
     <FontFaceLoader>
       <Component {...pageProps} />
+      <Analytics />
     </FontFaceLoader>
   </ThemeProvider>
 );
