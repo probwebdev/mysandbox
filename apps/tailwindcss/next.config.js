@@ -6,6 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const ContentSecurityPolicy = `
   default-src 'self' vitals.vercel-insights.com;
+  img-src https://*;
   child-src 'none';
 `;
 
