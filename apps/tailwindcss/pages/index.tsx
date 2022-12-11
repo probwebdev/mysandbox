@@ -20,7 +20,9 @@ const IndexPage = ({ links }: IndexPageProps): JSX.Element => (
     <div>
       <div className="m-0 px-5 text-center tracking-tighter xxl:px-16">
         <div className="m-0 text-center py-1-vru xxl:py-1-vru-xxl">
-          <h1 className="m-0 text-h2 xxl:text-h2-xxl">Robert Harbul</h1>
+          <h1 className="m-0 font-code tracking-tighter text-h2 xxl:text-h2-xxl">
+            Robert Harbul
+          </h1>
           <p className="text-h6 xxl:text-h6-xxl">Software Engineer</p>
         </div>
       </div>

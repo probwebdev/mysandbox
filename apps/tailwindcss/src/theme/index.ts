@@ -1,10 +1,5 @@
-import { Inter, JetBrains_Mono, Oswald } from '@next/font/google';
+import { Inter, JetBrains_Mono } from '@next/font/google';
 
-const oswald = Oswald({
-  variable: '--brand-font',
-  display: 'swap',
-  subsets: ['latin', 'latin-ext'],
-});
 const inter = Inter({
   variable: '--text-font',
   display: 'swap',
@@ -15,16 +10,11 @@ const mono = JetBrains_Mono({
   display: 'swap',
   subsets: ['latin', 'latin-ext'],
 });
-const classNames = [
-  oswald.variable ?? '',
-  inter.variable ?? '',
-  mono.variable ?? '',
-  'fonts-loaded',
-];
+
+const classNames = [inter.variable ?? '', mono.variable ?? '', 'fonts-loaded'];
 const typefaces = [
-  oswald.style.fontFamily,
-  inter.style.fontFamily,
-  mono.style.fontFamily,
+  inter.style.fontFamily.split(',')[0],
+  mono.style.fontFamily.split(',')[0],
 ];
 
 export interface ThemeFonts {

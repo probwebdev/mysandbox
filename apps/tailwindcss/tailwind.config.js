@@ -11,7 +11,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        brand: 'var(--brand-font)',
         text: 'var(--text-font)',
         code: 'var(--code-font)',
       },

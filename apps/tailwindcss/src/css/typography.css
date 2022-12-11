@@ -3,7 +3,6 @@
 */
 
 :root {
-  --brand-font: theme('fontFamily.sans');
   --text-font: theme('fontFamily.sans');
   --code-font: theme('fontFamily.mono');
   --text-root-size: theme('fontSize.root.base');
@@ -90,15 +89,6 @@ body {
 
 :where(.fonts-loaded) {
   font-family: var(--text-font);
-
-  & h1,
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    font-family: var(--brand-font);
-  }
 
   & code {
     font-family: var(--code-font);
