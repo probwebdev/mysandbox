@@ -2,11 +2,13 @@ import { Inter, JetBrains_Mono } from '@next/font/google';
 
 const inter = Inter({
   variable: '--text-font',
+  preload: false,
   display: 'swap',
   subsets: ['latin', 'latin-ext'],
 });
 const mono = JetBrains_Mono({
   variable: '--code-font',
+  preload: false,
   display: 'swap',
   subsets: ['latin', 'latin-ext'],
 });
