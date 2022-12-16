@@ -30,9 +30,9 @@
     "compose:ssg": "docker compose -f docker-compose.yml -f docker-compose.ssg.yml"
   },
   "devDependencies": {
-    "@mywebentry/eslint-config": "workspace:^1.2.3",
-    "@mywebentry/lint-staged-config": "workspace:^1.0.0",
-    "@mywebentry/prettier-config": "workspace:^1.0.0",
+    "@mywebentry/eslint-config": "workspace:^",
+    "@mywebentry/lint-staged-config": "workspace:^",
+    "@mywebentry/prettier-config": "workspace:^",
     "eslint": "^8.29.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
@@ -55,16 +55,16 @@
       }
     }
   },
-  "packageManager": "pnpm@7.16.1",
+  "packageManager": "pnpm@7.18.2",
   "engines": {
     "node": ">=16.15.0",
-    "pnpm": ">=7.9.0"
+    "pnpm": ">=7.18.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/robertgorbul/mysandbox"
   },
   "volta": {
-    "node": "16.18.1"
+    "node": "16.19.0"
   }
 }
