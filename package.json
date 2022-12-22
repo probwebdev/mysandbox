@@ -33,7 +33,7 @@
     "@mywebentry/eslint-config": "workspace:^",
     "@mywebentry/lint-staged-config": "workspace:^",
     "@mywebentry/prettier-config": "workspace:^",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
