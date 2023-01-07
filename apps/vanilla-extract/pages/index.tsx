@@ -12,7 +12,7 @@ const IndexPage = (): JSX.Element => {
   const links: SocialLink[] = [
     {
       label: 'Github Profile',
-      url: 'https://github.com/robertgorbul',
+      url: 'https://github.com/probwebdev',
       icon: <Github />,
     },
     {
@@ -22,12 +22,12 @@ const IndexPage = (): JSX.Element => {
     },
     {
       label: 'Twitter Profile',
-      url: 'https://twitter.com/robertgorbul',
+      url: 'https://twitter.com/probwebdev',
       icon: <Twitter />,
     },
     {
       label: 'Instagram Profile',
-      url: 'https://instagram.com/robertgorbul',
+      url: 'https://instagram.com/robert.harbul',
       icon: <Instagram />,
     },
   ];
@@ -61,7 +61,7 @@ const IndexPage = (): JSX.Element => {
         <div className="bg-light3 tracking-tight shadow-inner">
           <div className="text-center px-5 xxl:px-16 py-1-vru xxl:py-1-vru-xxl">
             ©{new Date().getFullYear()}, Built by{' '}
-            <span className="font-semibold">@robertgorbul</span> with{' '}
+            <span className="font-semibold">@probwebdev</span> with{' '}
             <a
               href="https://nextjs.org/"
               aria-label="Next.js by Vercel - The React Framework"

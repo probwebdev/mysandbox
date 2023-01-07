@@ -23,7 +23,7 @@ export const config = {
     },
     {
       name: 'twitter:creator',
-      content: '@robertgorbul',
+      content: '@probwebdev',
     },
   ],
 };
