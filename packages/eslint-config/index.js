@@ -137,7 +137,11 @@ const typescript = {
     ],
     '@typescript-eslint/no-floating-promises': [2, { ignoreIIFE: true }],
     '@typescript-eslint/explicit-function-return-type': 2,
-    '@typescript-eslint/consistent-type-imports': 2,
+    '@typescript-eslint/consistent-type-exports': 2,
+    '@typescript-eslint/consistent-type-imports': [
+      2,
+      { fixStyle: 'inline-type-imports' },
+    ],
   },
 };
 

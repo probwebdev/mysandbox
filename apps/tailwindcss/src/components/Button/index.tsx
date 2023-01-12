@@ -1,11 +1,9 @@
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 
 import { Icon } from '~components/Icon';
 
 import type { IconPath } from '~/src/assets/icons';
-
-import type { HTMLMotionProps } from 'framer-motion';
 
 export interface ButtonProps extends HTMLMotionProps<'button'> {
   icon?: IconPath;
@@ -37,8 +35,10 @@ export const Button = ({
 
   return (
     <motion.button className={classes} type={type} onClick={onClick} {...props}>
-      {icon && <Icon icon={icon} />}
-      {!action && children}
+      <>
+        {icon && <Icon icon={icon} />}
+        {!action && children}
+      </>
     </motion.button>
   );
 };

@@ -1,7 +1,6 @@
 import type { SVGAttributes } from 'react';
 
-import type { IconPath } from '~/src/assets/icons';
-import { iconsPaths } from '~/src/assets/icons';
+import { iconsPaths, type IconPath } from '~/src/assets/icons';
 
 export interface IconProps extends SVGAttributes<HTMLOrSVGElement> {
   icon: IconPath;

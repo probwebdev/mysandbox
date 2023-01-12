@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
-
-import type { HTMLMotionProps } from 'framer-motion';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 
 export const Button = ({
   className,

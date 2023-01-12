@@ -1,6 +1,6 @@
-import { ContentContainer } from '~components/ContentContainer';
+import { type PropsWithChildren } from '~types';
 
-import type { PropsWithChildren } from '~types';
+import { ContentContainer } from '~components/ContentContainer';
 
 export const LayoutContainer = ({
   children,
