@@ -1,10 +1,10 @@
 import { Analytics } from '@vercel/analytics/react';
 import { type AppProps } from 'next/app';
 
-import { FontFaceLoader } from '~components/FontFaceLoader';
-import { ThemeProvider } from '~theme/ThemeProvider';
+import '~/css/core.css';
 
-import '~/src/css/core.css';
+import { FontFaceLoader } from '~/components/FontFaceLoader';
+import { ThemeProvider } from '~/theme/ThemeProvider';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <ThemeProvider>

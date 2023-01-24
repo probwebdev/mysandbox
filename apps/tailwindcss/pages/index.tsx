@@ -1,5 +1,5 @@
-import { LayoutContainer } from '~components/LayoutContainer';
-import { Seo } from '~components/Seo';
+import { LayoutContainer } from '~/components/LayoutContainer';
+import { Seo } from '~/components/Seo';
 
 export interface IndexPageProps {
   links: SocialLink[];

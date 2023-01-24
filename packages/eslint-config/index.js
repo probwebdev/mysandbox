@@ -50,6 +50,10 @@ const common = {
             position: 'before',
           },
           {
+            pattern: '~/css/**',
+            group: 'internal',
+          },
+          {
             pattern: '~{components,config,theme,hooks}/**',
             group: 'parent',
             position: 'before',
@@ -59,7 +63,7 @@ const common = {
             group: 'parent',
           },
           {
-            pattern: '~types/**',
+            pattern: '~/types/**',
             group: 'type',
           },
         ],

@@ -1,8 +1,7 @@
 import Head from 'next/head';
 
-import { config } from '~config';
-
-import type { Meta, Link } from '~types';
+import { config } from '~/config';
+import type { Meta, Link } from '~/types';
 
 export interface SeoProps {
   title: string;

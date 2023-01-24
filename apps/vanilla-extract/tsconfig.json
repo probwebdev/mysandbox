@@ -18,12 +18,7 @@
     "noImplicitAny": true,
     "incremental": true,
     "paths": {
-      "~/*": ["./*"],
-      "~config": ["./src/config/index"],
-      "~types": ["./src/types/index"],
-      "~theme": ["./src/theme/index"],
-      "~hooks/*": ["./src/hooks/*"],
-      "~components/*": ["./src/components/*"]
+      "~/*": ["./src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -1,9 +1,8 @@
 import classNames from 'classnames';
 import { motion, type HTMLMotionProps } from 'framer-motion';
 
-import { Icon } from '~components/Icon';
-
-import type { IconPath } from '~/src/assets/icons';
+import type { IconPath } from '~/assets/icons';
+import { Icon } from '~/components/Icon';
 
 export interface ButtonProps extends HTMLMotionProps<'button'> {
   icon?: IconPath;

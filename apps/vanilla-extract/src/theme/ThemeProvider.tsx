@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
-import { theme } from './index';
+import type { PropsWithChildren } from '~/types';
 
-import type { PropsWithChildren } from '~types';
+import { theme } from './index';
 
 export const ThemeContext = createContext(theme);
 

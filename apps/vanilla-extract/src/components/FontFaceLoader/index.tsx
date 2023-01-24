@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 
-import { useTheme } from '~hooks/useTheme';
-
-import type { PropsWithChildren } from '~types';
+import { useTheme } from '~/hooks/useTheme';
+import type { PropsWithChildren } from '~/types';
 
 export const FontFaceLoader = ({
   children,

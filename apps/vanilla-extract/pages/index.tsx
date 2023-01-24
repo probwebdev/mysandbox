@@ -1,6 +1,6 @@
-import { Github, Linkedin, Twitter, Instagram } from '~components/Icon';
-import { LayoutContainer } from '~components/LayoutContainer';
-import { Seo } from '~components/Seo';
+import { Github, Linkedin, Twitter, Instagram } from '~/components/Icon';
+import { LayoutContainer } from '~/components/LayoutContainer';
+import { Seo } from '~/components/Seo';
 
 export interface SocialLink {
   label: string;

@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from '~types';
+import type { PropsWithChildren } from '~/types';
 
 export const ContentContainer = ({
   children,
