@@ -10,12 +10,10 @@
       "outputs": [".next/**", "out/**"]
     },
     "lint:js": {
-      "inputs": ["./**/*.js", "./**/*.ts", "./**/*.tsx"],
-      "outputs": []
+      "inputs": ["./**/*.js", "./**/*.ts", "./**/*.tsx"]
     },
     "lint:css": {
-      "inputs": ["./src/**/*.css"],
-      "outputs": []
+      "inputs": ["./src/**/*.css"]
     },
     "lint:format": {
       "inputs": [
@@ -24,8 +22,15 @@
         "./**/*.md",
         "./**/*.css",
         "./**/*.json"
-      ],
-      "outputs": []
+      ]
     }
-  }
+  },
+  "globalDependencies": [
+    ".env",
+    ".eslintrc.js",
+    "tsconfig.json",
+    "postcss.config.js",
+    "stylelint.config.js",
+    "prettier.config.js"
+  ]
 }

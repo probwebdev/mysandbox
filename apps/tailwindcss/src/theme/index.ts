@@ -1,4 +1,4 @@
-import { Inter, JetBrains_Mono } from '@next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 
 const inter = Inter({
   variable: '--text-font',

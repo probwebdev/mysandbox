@@ -1,4 +1,4 @@
-import { Inter, JetBrains_Mono, Oswald } from '@next/font/google';
+import { Inter, JetBrains_Mono, Oswald } from 'next/font/google';
 
 const oswald = Oswald({
   variable: '--brand-font',

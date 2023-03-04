@@ -35,7 +35,7 @@ export const Button = ({
   return (
     <motion.button className={classes} type={type} onClick={onClick} {...props}>
       <>
-        {icon && <Icon icon={icon} />}
+        {typeof icon !== 'undefined' && <Icon icon={icon} />}
         {!action && children}
       </>
     </motion.button>
