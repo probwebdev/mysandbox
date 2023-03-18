@@ -12,11 +12,11 @@
   "main": "index.js",
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
@@ -29,12 +29,12 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.2"
   },
   "peerDependencies": {
-    "eslint": "^8.29.0",
+    "eslint": "^8.36.0",
     "prettier": "^2.8.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.2"
   },
   "peerDependenciesMeta": {
     "typescript": {
