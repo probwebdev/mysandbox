@@ -11,6 +11,9 @@
   ],
   "main": "index.js",
   "peerDependencies": {
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.7"
+  },
+  "dependencies": {
+    "prettier": "^2.8.7"
   }
 }
