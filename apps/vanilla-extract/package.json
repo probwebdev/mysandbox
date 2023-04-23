@@ -10,7 +10,6 @@
     "reactjs",
     "nextjs",
     "vanilla-extract",
-    "framer-motion",
     "typescript",
     "portfolio"
   ],
@@ -24,8 +23,7 @@
     "lint:js": "eslint './**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
-    "framer-motion": "^10.10.0",
-    "next": "~13.2.4",
+    "next": "~13.3.1",
     "react": "~18.2.0",
     "react-dom": "~18.2.0"
   },
@@ -33,20 +31,16 @@
     "@mywebentry/eslint-config": "workspace:^",
     "@mywebentry/lint-staged-config": "workspace:^",
     "@mywebentry/prettier-config": "workspace:^",
-    "@next/bundle-analyzer": "~13.2.4",
-    "@next/eslint-plugin-next": "~13.2.4",
+    "@next/bundle-analyzer": "~13.3.1",
+    "@next/eslint-plugin-next": "~13.3.1",
     "@types/css-font-loading-module": "^0.0.8",
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.31",
-    "@types/react-dom": "^18.0.11",
     "@vanilla-extract/css": "^1.11.0",
-    "@vanilla-extract/next-plugin": "^2.1.1",
+    "@vanilla-extract/next-plugin": "^2.1.2",
     "@vanilla-extract/recipes": "^0.4.0",
-    "@vanilla-extract/sprinkles": "^1.5.2",
-    "eslint-config-next": "~13.2.4",
-    "identity-obj-proxy": "^3.0.0",
-    "typescript": "~5.0.3",
-    "webpack": "^5.77.0"
+    "@vanilla-extract/sprinkles": "^1.6.0",
+    "eslint-config-next": "~13.3.1",
+    "typescript": "~5.0.4",
+    "webpack": "^5.80.0"
   },
   "browserslist": [
     "last 2 versions",
