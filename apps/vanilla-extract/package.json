@@ -23,7 +23,7 @@
     "lint:js": "eslint './**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
-    "next": "~13.3.1",
+    "next": "~13.4.10",
     "react": "~18.2.0",
     "react-dom": "~18.2.0"
   },
@@ -31,16 +31,16 @@
     "@mywebentry/eslint-config": "workspace:^",
     "@mywebentry/lint-staged-config": "workspace:^",
     "@mywebentry/prettier-config": "workspace:^",
-    "@next/bundle-analyzer": "~13.3.1",
-    "@next/eslint-plugin-next": "~13.3.1",
+    "@next/bundle-analyzer": "~13.4.10",
+    "@next/eslint-plugin-next": "~13.4.10",
     "@types/css-font-loading-module": "^0.0.8",
-    "@vanilla-extract/css": "^1.11.0",
-    "@vanilla-extract/next-plugin": "^2.1.2",
+    "@vanilla-extract/css": "^1.12.0",
+    "@vanilla-extract/next-plugin": "^2.1.3",
     "@vanilla-extract/recipes": "^0.4.0",
-    "@vanilla-extract/sprinkles": "^1.6.0",
-    "eslint-config-next": "~13.3.1",
-    "typescript": "~5.0.4",
-    "webpack": "^5.80.0"
+    "@vanilla-extract/sprinkles": "^1.6.1",
+    "eslint-config-next": "~13.4.10",
+    "typescript": "~5.1.6",
+    "webpack": "^5.88.2"
   },
   "browserslist": [
     "last 2 versions",

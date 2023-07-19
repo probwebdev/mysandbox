@@ -2,7 +2,7 @@
   "name": "@mywebentry/prettier-config",
   "description": "Custom Prettier config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "bugs": "https://github.com/probwebdev/mysandbox/issues",
   "license": "MIT",
   "keywords": [
@@ -11,9 +11,9 @@
   ],
   "main": "index.js",
   "peerDependencies": {
-    "prettier": "^2.8.7"
+    "prettier": "^3.0.0"
   },
   "dependencies": {
-    "prettier": "^2.8.7"
+    "prettier": "^3.0.0"
   }
 }
