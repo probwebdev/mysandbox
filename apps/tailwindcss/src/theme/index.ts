@@ -17,8 +17,8 @@ const classNames = [inter.variable, mono.variable, 'fonts-loaded'].filter(
   Boolean
 );
 const typefaces = [
-  inter.style.fontFamily.split(',')[0],
-  mono.style.fontFamily.split(',')[0],
+  inter.style.fontFamily.split(',')[0] ?? '',
+  mono.style.fontFamily.split(',')[0] ?? '',
 ];
 
 export interface ThemeFonts {
