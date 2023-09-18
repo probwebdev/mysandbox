@@ -1,0 +1,10 @@
+{
+  "extends": ["@acme/ts-config/base.json"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "./",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

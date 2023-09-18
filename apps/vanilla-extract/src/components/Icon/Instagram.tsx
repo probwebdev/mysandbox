@@ -1,6 +1,6 @@
 import { Base } from './Base';
 
-export const Instagram = (): JSX.Element => (
+export const Instagram = () => (
   <Base fill="currentColor">
     <title>Instagram Logo</title>
     <path

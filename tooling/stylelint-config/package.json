@@ -1,19 +1,21 @@
 {
-  "name": "@mywebentry/prettier-config",
-  "description": "Custom Prettier config",
+  "name": "@acme/stylelint-config",
+  "description": "Custom Stylelint config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "bugs": "https://github.com/probwebdev/mysandbox/issues",
   "license": "MIT",
   "keywords": [
-    "prettier",
+    "stylelint",
     "config"
   ],
   "main": "index.js",
-  "peerDependencies": {
-    "prettier": "^3.0.0"
-  },
   "dependencies": {
-    "prettier": "^3.0.2"
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-prettier": "^4.0.2"
+  },
+  "peerDependencies": {
+    "stylelint": "^15.10.3",
+    "prettier": "^3.0.0"
   }
 }

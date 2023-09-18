@@ -16,7 +16,7 @@ export const Seo = ({
   description = 'Personal Sandbox',
   meta = [],
   links = [],
-}: SeoProps): JSX.Element => {
+}: SeoProps) => {
   const pageMeta = [...config.meta, ...meta];
 
   return (
@@ -30,9 +30,10 @@ export const Seo = ({
       <title>{`${title} | probablyweb.dev`}</title>
       <meta name="theme-color" content="#fff" />
       <meta name="description" content={description} />
-      {pageMeta?.length &&
+      {pageMeta.length > 0 &&
         pageMeta.map((item) => <meta key={item.content} {...item} />)}
-      {links?.length && links.map((item) => <link key={item.href} {...item} />)}
+      {links.length > 0 &&
+        links.map((item) => <link key={item.href} {...item} />)}
     </Head>
   );
 };

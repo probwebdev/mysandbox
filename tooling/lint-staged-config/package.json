@@ -1,5 +1,5 @@
 {
-  "name": "@mywebentry/lint-staged-config",
+  "name": "@acme/lint-staged-config",
   "description": "Custom lint-staged config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
   "version": "1.0.0",

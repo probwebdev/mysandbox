@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@mywebentry/lint-staged-config'),
+  ...require('@acme/lint-staged-config'),
 };

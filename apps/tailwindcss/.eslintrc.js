@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    '@mywebentry/eslint-config',
+    '@acme/eslint-config',
     'plugin:@next/next/recommended',
     'plugin:tailwindcss/recommended',
   ],

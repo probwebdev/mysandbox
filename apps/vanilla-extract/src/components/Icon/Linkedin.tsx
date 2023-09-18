@@ -1,6 +1,6 @@
 import { Base } from './Base';
 
-export const Linkedin = (): JSX.Element => (
+export const Linkedin = () => (
   <Base fill="currentColor">
     <title>Linkedin Logo</title>
     <path

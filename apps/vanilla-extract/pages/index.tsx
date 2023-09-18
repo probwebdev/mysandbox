@@ -1,3 +1,5 @@
+import { type ReactNode } from 'react';
+
 import { Github, Linkedin, Twitter, Instagram } from '~/components/Icon';
 import { LayoutContainer } from '~/components/LayoutContainer';
 import { Seo } from '~/components/Seo';
@@ -5,10 +7,10 @@ import { Seo } from '~/components/Seo';
 export interface SocialLink {
   label: string;
   url: string;
-  icon: JSX.Element;
+  icon: ReactNode;
 }
 
-const IndexPage = (): JSX.Element => {
+const IndexPage = () => {
   const links: SocialLink[] = [
     {
       label: 'Github Profile',

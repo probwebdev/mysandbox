@@ -1,11 +1,9 @@
-import { createContext } from 'react';
-
-import type { PropsWithChildren } from '~/types';
+import { createContext, type PropsWithChildren } from 'react';
 
 import { theme } from './index';
 
 export const ThemeContext = createContext(theme);
 
-export const ThemeProvider = ({ children }: PropsWithChildren): JSX.Element => (
+export const ThemeProvider = ({ children }: PropsWithChildren) => (
   <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 );

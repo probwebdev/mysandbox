@@ -6,7 +6,7 @@ import '~/css/core.css';
 import { FontFaceLoader } from '~/components/FontFaceLoader';
 import { ThemeProvider } from '~/theme/ThemeProvider';
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider>
     <FontFaceLoader>
       <Component {...pageProps} />

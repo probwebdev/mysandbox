@@ -1,4 +1,4 @@
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Inter, JetBrains_Mono as JetBrainsMono } from 'next/font/google';
 
 const inter = Inter({
   variable: '--text-font',
@@ -6,14 +6,16 @@ const inter = Inter({
   display: 'swap',
   subsets: ['latin', 'latin-ext'],
 });
-const mono = JetBrains_Mono({
+const mono = JetBrainsMono({
   variable: '--code-font',
   preload: false,
   display: 'swap',
   subsets: ['latin', 'latin-ext'],
 });
 
-const classNames = [inter.variable ?? '', mono.variable ?? '', 'fonts-loaded'];
+const classNames = [inter.variable, mono.variable, 'fonts-loaded'].filter(
+  Boolean
+);
 const typefaces = [
   inter.style.fontFamily.split(',')[0],
   mono.style.fontFamily.split(',')[0],

@@ -21,12 +21,12 @@ const common = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:import/recommended',
     'plugin:promise/recommended',
   ],
   plugins: [],
   rules: {
     'quotes': 0,
+    'multiline-ternary': 0,
     'no-console': [2, { allow: ['warn', 'error'] }],
     'import/extensions': [2, 'never'],
     'import/prefer-default-export': 0,
@@ -119,7 +119,8 @@ const typescript = {
     ...common.extends,
     'standard-with-typescript',
     'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
   ],
   rules: {
     ...common.rules,
@@ -140,7 +141,7 @@ const typescript = {
       },
     ],
     '@typescript-eslint/no-floating-promises': [2, { ignoreIIFE: true }],
-    '@typescript-eslint/explicit-function-return-type': 2,
+    '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/consistent-type-exports': 2,
     '@typescript-eslint/consistent-type-imports': [
       2,

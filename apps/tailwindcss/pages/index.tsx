@@ -1,10 +1,6 @@
 import { LayoutContainer } from '~/components/LayoutContainer';
 import { Seo } from '~/components/Seo';
 
-export interface IndexPageProps {
-  links: SocialLink[];
-}
-
 export interface SocialLink {
   label: string;
   url: string;
@@ -14,7 +10,11 @@ export interface SocialLink {
   };
 }
 
-const IndexPage = ({ links }: IndexPageProps): JSX.Element => (
+export interface IndexPageProps {
+  links: SocialLink[];
+}
+
+const IndexPage = ({ links }: IndexPageProps) => (
   <LayoutContainer>
     <Seo title="Welcome" />
     <div>
@@ -72,6 +72,7 @@ const IndexPage = ({ links }: IndexPageProps): JSX.Element => (
   </LayoutContainer>
 );
 
+// eslint-disable-next-line @typescript-eslint/require-await
 export async function getStaticProps(): Promise<{ props: IndexPageProps }> {
   return {
     props: {

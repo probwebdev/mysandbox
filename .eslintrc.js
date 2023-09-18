@@ -1,5 +1,5 @@
 module.exports = {
   root: true,
-  extends: ['@mywebentry/eslint-config'],
+  extends: ['@acme/eslint-config'],
   parserOptions: { tsconfigRootDir: __dirname },
 };

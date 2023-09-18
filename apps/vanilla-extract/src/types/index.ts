@@ -1,5 +1,4 @@
 import type {
-  ReactNode,
   DetailedHTMLProps,
   LinkHTMLAttributes,
   MetaHTMLAttributes,
@@ -14,7 +13,3 @@ export type Link = DetailedHTMLProps<
   LinkHTMLAttributes<HTMLLinkElement>,
   HTMLLinkElement
 >;
-
-export interface PropsWithChildren {
-  children: ReactNode;
-}

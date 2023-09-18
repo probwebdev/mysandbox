@@ -1,6 +1,6 @@
 import { Base } from './Base';
 
-export const Twitter = (): JSX.Element => (
+export const Twitter = () => (
   <Base fill="currentColor">
     <title>Twitter Logo</title>
     <path

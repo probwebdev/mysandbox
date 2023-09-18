@@ -13,7 +13,7 @@ export const Icon = ({
   width = 24,
   height = 24,
   ...props
-}: IconProps): JSX.Element => (
+}: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

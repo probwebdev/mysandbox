@@ -1,6 +1,6 @@
 import { Base } from './Base';
 
-export const Github = (): JSX.Element => (
+export const Github = () => (
   <Base fill="currentColor">
     <title>Github Logo</title>
     <path
