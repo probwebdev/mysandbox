@@ -34,8 +34,8 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@types/node": "^18.17.17",
-    "@types/react": "^18.2.21",
+    "@types/node": "^18.17.18",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.49.0",
     "husky": "^8.0.3",
@@ -64,8 +64,8 @@
     "url": "https://github.com/probwebdev/mysandbox"
   },
   "volta": {
-    "node": "18.17.1",
+    "node": "18.18.0",
     "npm": "9.8.1",
-    "pnpm": "8.7.5"
+    "pnpm": "8.7.6"
   }
 }

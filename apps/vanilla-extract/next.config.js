@@ -12,9 +12,6 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
-  experimental: {
-    legacyBrowsers: false,
-  },
 };
 module.exports = () => {
   const plugins = [withVanillaExtract, withBundleAnalyzer];
