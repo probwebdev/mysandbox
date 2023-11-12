@@ -34,12 +34,12 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@types/node": "^18.18.7",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
-    "eslint": "^8.52.0",
+    "@types/node": "^18.18.9",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "eslint": "^8.53.0",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
+    "lint-staged": "^15.1.0",
     "prettier": "^3.0.3",
     "stylelint": "^15.11.0",
     "turbo": "^1.10.16",
@@ -54,10 +54,10 @@
       ]
     }
   },
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.10.3",
   "engines": {
-    "node": ">=18.17.0",
-    "pnpm": ">=8.7.0"
+    "node": ">=18.18.0",
+    "pnpm": ">=8.10.0"
   },
   "repository": {
     "type": "git",
@@ -65,7 +65,7 @@
   },
   "volta": {
     "node": "18.18.2",
-    "npm": "10.2.0",
-    "pnpm": "8.9.2"
+    "npm": "10.2.3",
+    "pnpm": "8.10.3"
   }
 }
