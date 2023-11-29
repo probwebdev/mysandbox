@@ -1,9 +1,9 @@
 {
   "private": true,
   "name": "mysandbox",
-  "description": "Personal Sandbox",
+  "description": "Personal sandbox to try stuff",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "bugs": "https://github.com/probwebdev/mysandbox/issues",
   "license": "MIT",
   "keywords": [
@@ -35,7 +35,7 @@
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
     "@types/node": "^18.18.13",
-    "@types/react": "^18.2.38",
+    "@types/react": "^18.2.39",
     "@types/react-dom": "^18.2.17",
     "eslint": "^8.54.0",
     "husky": "^8.0.3",
