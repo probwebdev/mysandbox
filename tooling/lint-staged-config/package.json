@@ -9,5 +9,9 @@
     "lint-staged",
     "config"
   ],
-  "main": "index.js"
+  "files": [
+    "react.js",
+    "base.js",
+    "css.js"
+  ]
 }

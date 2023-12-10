@@ -23,6 +23,6 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.3"
   }
 }
