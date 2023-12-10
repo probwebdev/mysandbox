@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { type AppProps } from 'next/app';
 
 import '~/css/core.css';
@@ -11,6 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <FontFaceLoader>
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </FontFaceLoader>
   </ThemeProvider>
 );
