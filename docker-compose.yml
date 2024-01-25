@@ -3,7 +3,7 @@ version: "3"
 services:
 
   traefik:
-    image: traefik:2.8
+    image: traefik:2.10
     ports:
       - "80:80"
     labels:

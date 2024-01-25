@@ -16,7 +16,7 @@ Example `.env`:
 
 ```dotenv
 # NodeJS
-IMAGE_VER=16-slim@sha256:c7a907053a69f6cfbe4c50302e001c1fcc44e69e8462043fecd21f7852560107
+IMAGE_VER=20-slim
 
 # Project
 ## Default package

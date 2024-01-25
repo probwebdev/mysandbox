@@ -28,9 +28,11 @@ const common = {
     'quotes': 0,
     'multiline-ternary': 0,
     'no-console': [2, { allow: ['warn', 'error'] }],
+    'no-duplicate-imports': 0,
     'import/extensions': [2, 'never'],
     'import/prefer-default-export': 0,
     'import/no-default-export': 2,
+    'import/no-duplicates': [2, { 'prefer-inline': true }],
     'import/order': [
       1,
       {
@@ -147,6 +149,7 @@ const typescript = {
       2,
       { fixStyle: 'inline-type-imports' },
     ],
+    '@typescript-eslint/no-import-type-side-effects': 2,
   },
 };
 

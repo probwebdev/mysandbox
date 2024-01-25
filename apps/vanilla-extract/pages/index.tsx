@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import { Github, Linkedin, Twitter, Instagram } from '~/components/Icon';
 import { LayoutContainer } from '~/components/LayoutContainer';
