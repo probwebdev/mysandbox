@@ -119,7 +119,6 @@ const typescript = {
   plugins: [...common.plugins, '@typescript-eslint'],
   extends: [
     ...common.extends,
-    'standard-with-typescript',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
