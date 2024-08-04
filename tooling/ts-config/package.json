@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@acme/ts-config",
   "description": "Custom Typescript config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",

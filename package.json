@@ -16,8 +16,6 @@
     "monorepo"
   ],
   "scripts": {
-    "postinstall": "husky install",
-    "browserslist": "pnpm dlx browserslist@latest --update-db",
     "dev": "pnpm --filter=@mywebentry/vanilla-extract dev",
     "start": "pnpm --filter=@mywebentry/vanilla-extract start",
     "export": "pnpm turbo run export",
@@ -25,6 +23,7 @@
     "lint:format": "pnpm turbo run lint:format",
     "lint:css": "pnpm turbo run lint:css",
     "lint:js": "pnpm turbo run lint:js",
+    "browserslist": "pnpm dlx browserslist@latest --update-db",
     "compose:dev": "docker compose -f docker-compose.yml -f docker-compose.override.yml",
     "compose:server": "docker compose -f docker-compose.yml -f docker-compose.server.yml",
     "compose:ssg": "docker compose -f docker-compose.yml -f docker-compose.ssg.yml"
@@ -34,19 +33,22 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "eslint": "^8.57.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "stylelint": "^16.3.1",
-    "turbo": "^1.13.2",
-    "typescript": "~5.4.5"
+    "@types/node": "^20.14.15",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.8.1",
+    "turbo": "^2.0.12",
+    "typescript": "~5.5.4"
   },
   "pnpm": {
     "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "9"
+      },
       "ignoreMissing": [
         "eslint",
         "prettier",
@@ -54,11 +56,11 @@
       ]
     }
   },
-  "packageManager": "pnpm@8.15.7",
+  "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": ">=20.10.0",
     "npm": ">=10.5.2",
-    "pnpm": ">=8.15.7"
+    "pnpm": ">=9.0.0"
   },
   "repository": {
     "type": "git",

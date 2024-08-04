@@ -14,6 +14,6 @@ const plugins = [
   ],
 ];
 
-module.exports = {
+export default {
   plugins,
 };

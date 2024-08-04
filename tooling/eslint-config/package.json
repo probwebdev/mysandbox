@@ -1,41 +1,43 @@
 {
+  "type": "module",
   "name": "@acme/eslint-config",
   "description": "Custom ESLint config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "bugs": "https://github.com/probwebdev/mysandbox/issues",
   "license": "MIT",
   "keywords": [
     "eslint",
     "config"
   ],
-  "main": "index.js",
+  "main": "index.mjs",
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.10.2",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
-    "eslint": "^8.57.0",
+    "@eslint/js": "^9.9.0",
+    "@eslint/compat": "^1.1.1",
+    "@stylistic/eslint-plugin": "^2.6.2",
+    "typescript-eslint": "^8.0.1",
+    "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^28.2.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-import-x": "^3.1.0",
+    "eslint-plugin-jest": "^28.8.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "globals": "^15.9.0"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "eslint": "^8.54.0",
-    "prettier": "^3.2.0",
-    "typescript": "^5.3.2"
+    "eslint": "^9.8.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   },
   "peerDependenciesMeta": {
     "typescript": {

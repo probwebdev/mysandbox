@@ -1,6 +1,6 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+import bundleAnalyzer from '@next/bundle-analyzer';
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
@@ -26,13 +26,13 @@ const nextConfig = {
   },
 };
 
-module.exports = (phase) => {
+export default (phase) => {
   const config = [withBundleAnalyzer].reduce(
     (acc, plugin) => plugin(acc),
     nextConfig
   );
 
-  if (phase !== PHASE_DEVELOPMENT_SERVER) {
+  if (phase !== 'phase-development-server') {
     return {
       async headers() {
         return [

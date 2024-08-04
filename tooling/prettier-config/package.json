@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@acme/prettier-config",
   "description": "Custom Prettier config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
@@ -9,11 +10,11 @@
     "prettier",
     "config"
   ],
-  "main": "index.js",
+  "main": "index.mjs",
   "peerDependencies": {
-    "prettier": "^3.2.0"
+    "prettier": "^3.3.3"
   },
   "dependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.3"
   }
 }

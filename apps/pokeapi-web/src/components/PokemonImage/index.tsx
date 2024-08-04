@@ -1,5 +1,4 @@
-import { type ImageProps } from 'next/image';
-import Image from 'next/image';
+import Image, { type ImageProps } from 'next/image';
 
 import pngSrc from './imgs/placeholder.png';
 import styles from './pokemon-image.module.css';

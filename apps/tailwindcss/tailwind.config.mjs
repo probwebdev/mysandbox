@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss/plugin').Plugin} */
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './pages/**/!(*.d).{js,jsx,ts,tsx}',
     './src/**/!(*.d).{js,jsx,ts,tsx}',

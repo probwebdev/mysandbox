@@ -1,19 +1,46 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "pipeline": {
+  "globalDependencies": [
+    ".env",
+    "tsconfig.json",
+    "eslint.config.js",
+    "eslint.config.mjs",
+    "postcss.config.js",
+    "postcss.config.mjs",
+    "stylelint.config.js",
+    "stylelint.config.mjs",
+    "prettier.config.js",
+    "prettier.config.mjs"
+  ],
+  "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**"
+      ]
     },
     "export": {
-      "dependsOn": ["^export"],
-      "outputs": [".next/**", "out/**"]
+      "dependsOn": [
+        "^export"
+      ],
+      "outputs": [
+        ".next/**",
+        "out/**"
+      ]
     },
     "lint:js": {
-      "inputs": ["./**/*.js", "./**/*.ts", "./**/*.tsx"]
+      "inputs": [
+        "./**/*.js",
+        "./**/*.ts",
+        "./**/*.tsx"
+      ]
     },
     "lint:css": {
-      "inputs": ["./src/**/*.css"]
+      "inputs": [
+        "./src/**/*.css"
+      ]
     },
     "lint:format": {
       "inputs": [
@@ -24,13 +51,5 @@
         "./**/*.json"
       ]
     }
-  },
-  "globalDependencies": [
-    ".env",
-    ".eslintrc.js",
-    "tsconfig.json",
-    "postcss.config.js",
-    "stylelint.config.js",
-    "prettier.config.js"
-  ]
+  }
 }

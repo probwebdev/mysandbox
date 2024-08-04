@@ -66,7 +66,6 @@ export const pokeapiRouter = createTRPCRouter({
         : undefined;
 
       const ancestors = [
-        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
         species.evolves_from_species?.name,
         species.name,
       ].filter(Boolean);

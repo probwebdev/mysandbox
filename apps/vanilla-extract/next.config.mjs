@@ -1,7 +1,9 @@
-const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
+import bundleAnalyzer from '@next/bundle-analyzer';
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 
 const withVanillaExtract = createVanillaExtractPlugin();
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
@@ -13,7 +15,8 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 };
-module.exports = () => {
+
+export default () => {
   const plugins = [withVanillaExtract, withBundleAnalyzer];
 
   return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);

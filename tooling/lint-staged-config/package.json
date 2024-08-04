@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@acme/lint-staged-config",
   "description": "Custom lint-staged config",
   "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
@@ -10,8 +11,10 @@
     "config"
   ],
   "files": [
-    "react.js",
-    "base.js",
-    "css.js"
+    "base.json",
+    "css.json",
+    "react.json",
+    "javascript.json",
+    "typescript.json"
   ]
 }
