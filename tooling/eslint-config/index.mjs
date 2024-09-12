@@ -1,23 +1,28 @@
 import globals from 'globals';
 import eslint from '@eslint/js';
 import { fixupPluginRules } from '@eslint/compat';
-import stylistic from '@stylistic/eslint-plugin'
+import stylistic from '@stylistic/eslint-plugin';
 import node from 'eslint-plugin-n';
 import importX from 'eslint-plugin-import-x';
 import prettier from 'eslint-plugin-prettier/recommended';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import promise from 'eslint-plugin-promise'
+import promise from 'eslint-plugin-promise';
 import jest from 'eslint-plugin-jest';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import typescript from 'typescript-eslint';
 
 /** @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig} */
 const commonConfig = {
+  name: 'acme/flat/recommended',
   languageOptions: {
     globals: {
       ...globals.browser,
       ...globals.node,
+      ...globals.es2021,
+    },
+    parserOptions: {
+      ecmaVersion: 2021,
     },
   },
   plugins: {
@@ -86,13 +91,12 @@ const commonConfig = {
     // temporary-disable
     'n/no-missing-import': 0,
   },
-  ignores: [
-    'node_modules',
-  ],
+  ignores: ['node_modules'],
 };
 
 /** @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig} */
 const reactConfig = {
+  name: 'acme/flat/react',
   files: ['**/*.{jsx,tsx}'],
   languageOptions: {
     parserOptions: {
@@ -125,11 +129,12 @@ const reactConfig = {
     'react/jsx-props-no-spreading': 0,
     'react/require-default-props': 0,
     ...reactHooks.configs.recommended.rules,
-  }
+  },
 };
 
 /** @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig} */
 const typescriptConfig = {
+  name: 'acme/flat/typescript',
   files: ['**/*.{ts,tsx}'],
   languageOptions: {
     globals: {
@@ -162,7 +167,7 @@ const typescriptConfig = {
     '@typescript-eslint': typescript.plugin,
   },
   rules: {
-    ...commonConfig.rules,
+    ...importX.configs.typescript.rules,
     'react/prop-types': 0,
     '@typescript-eslint/member-delimiter-style': 0,
     '@typescript-eslint/strict-boolean-expressions': [
@@ -186,6 +191,7 @@ const typescriptConfig = {
 
 /** @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig} */
 const testsConfig = {
+  name: 'acme/flat/tests',
   files: ['**/*.test.{ts,tsx}'],
   languageOptions: {
     globals: {
@@ -208,24 +214,26 @@ const testsConfig = {
 export default {
   configs: {
     'flat/recommended': [
-      eslint.configs.recommended,
+      {
+        name: 'eslint/flat/recommended',
+        ...eslint.configs.recommended,
+      },
       node.configs['flat/recommended'],
       promise.configs['flat/recommended'],
-      prettier,
+      {
+        name: 'prettier/flat/recommended',
+        ...prettier,
+      },
       commonConfig,
     ],
-    'flat/react': [
-      jsxA11y.flatConfigs.recommended,
-      reactConfig,
-    ],
+    'flat/react': [jsxA11y.flatConfigs.recommended, reactConfig],
     'flat/typescript': [
-      importX.configs.typescript,
       ...typescript.configs.strict,
-      ...typescript.configs.stylistic,
+      ...typescript.configs.stylistic.filter(({ name = '' }) =>
+        name.includes('stylistic')
+      ),
       typescriptConfig,
     ],
-    'flat/tests': [
-      testsConfig,
-    ]
-  }
+    'flat/tests': [testsConfig],
+  },
 };

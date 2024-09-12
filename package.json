@@ -23,6 +23,7 @@
     "lint:format": "pnpm turbo run lint:format",
     "lint:css": "pnpm turbo run lint:css",
     "lint:js": "pnpm turbo run lint:js",
+    "lint:js:inspector": "pnpm dlx @eslint/config-inspector@latest",
     "browserslist": "pnpm dlx browserslist@latest --update-db",
     "compose:dev": "docker compose -f docker-compose.yml -f docker-compose.override.yml",
     "compose:server": "docker compose -f docker-compose.yml -f docker-compose.server.yml",
@@ -33,16 +34,16 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@types/node": "^20.14.15",
-    "@types/react": "^18.3.3",
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "eslint": "^9.9.0",
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.8",
+    "eslint": "^9.10.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "stylelint": "^16.8.1",
-    "turbo": "^2.0.12",
-    "typescript": "~5.5.4"
+    "stylelint": "^16.9.0",
+    "turbo": "^2.1.1",
+    "typescript": "~5.6.2"
   },
   "pnpm": {
     "peerDependencyRules": {

@@ -3,11 +3,6 @@ import acme from '@acme/eslint-config';
 export default [
   ...acme.configs['flat/recommended'],
   {
-    languageOptions: {
-      parserOptions: {
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
     ignores: [
       'out',
       '.next',
@@ -20,6 +15,8 @@ export default [
       'node_modules',
       '.pnpm-store',
       'apps',
+      'tooling',
+      'packages',
     ],
   },
 ];

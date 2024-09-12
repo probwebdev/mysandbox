@@ -20,17 +20,18 @@
     "build:analyze": "ANALYZE=true pnpm build",
     "lint:format": "prettier --check './**/*.{js,jsx,ts,tsx,mjs,cjs,md,mdx,html,css,json}'",
     "lint:css": "stylelint './src/**/*.css'",
-    "lint:js": "eslint './**/*.{js,jsx,ts,tsx,mjs,cjs}'"
+    "lint:js": "eslint './**/*.{js,jsx,ts,tsx,mjs,cjs}'",
+    "lint:js:inspector": "pnpm dlx @eslint/config-inspector@latest"
   },
   "dependencies": {
     "@acme/api": "workspace:^",
     "@trpc/client": "^10.45.2",
     "@trpc/next": "^10.45.2",
     "classnames": "^2.5.1",
-    "next": "~14.2.5",
+    "next": "~14.2.11",
     "react": "~18.3.1",
     "react-dom": "~18.3.1",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:^",
@@ -38,22 +39,22 @@
     "@acme/prettier-config": "workspace:^",
     "@acme/stylelint-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@next/bundle-analyzer": "~14.2.5",
-    "@next/eslint-plugin-next": "~14.2.5",
+    "@next/bundle-analyzer": "~14.2.11",
+    "@next/eslint-plugin-next": "~14.2.11",
     "autoprefixer": "^10.4.20",
     "browserslist": "^4.23.3",
-    "eslint-config-next": "~14.2.5",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-react": "^7.35.0",
+    "eslint-config-next": "~14.2.11",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "postcss": "~8.4.41",
+    "postcss": "~8.4.45",
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.0",
-    "postcss-preset-env": "^10.0.0",
+    "postcss-preset-env": "^10.0.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
-    "tailwindcss": "~3.4.9",
-    "typescript": "~5.5.4"
+    "tailwindcss": "~3.4.11",
+    "typescript": "~5.6.2"
   },
   "browserslist": [
     "last 2 versions",

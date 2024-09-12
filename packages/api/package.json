@@ -14,11 +14,12 @@
   "types": "./index.ts",
   "scripts": {
     "lint:format": "prettier --check './**/*.{js,mjs,cjs,ts,md,mdx,html,css,json}'",
-    "lint:js": "eslint './**/*.{js,mjs,cjs,ts}'"
+    "lint:js": "eslint './**/*.{js,mjs,cjs,ts}'",
+    "lint:js:inspector": "pnpm dlx @eslint/config-inspector@latest"
   },
   "dependencies": {
     "@trpc/server": "^10.45.2",
-    "axios": "^1.7.3",
+    "axios": "^1.7.7",
     "axios-cache-interceptor": "^1.5.3",
     "pokenode-ts": "^1.20.0",
     "zod": "^3.23.8"
@@ -28,6 +29,6 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.2"
   }
 }
