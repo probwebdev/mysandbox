@@ -2,3 +2,12 @@ packages:
   - 'apps/*'
   - 'packages/*'
   - 'tooling/*'
+
+catalog:
+  react: ~18.3.1
+  react-dom: ~18.3.1
+  typescript: ~5.6.3
+  next: ~15.0.3
+  "@next/bundle-analyzer": ~15.0.3
+  "@next/eslint-plugin-next": ~15.0.3
+  eslint-config-next: ~15.0.3

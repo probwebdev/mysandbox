@@ -1,5 +1,4 @@
-import '~/css/core.css';
-
+import '../src/css/core.css';
 import { trpc } from '~/utils/trpc';
 
 import type { AppType } from 'next/app';

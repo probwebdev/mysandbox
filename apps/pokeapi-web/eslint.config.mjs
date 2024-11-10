@@ -7,6 +7,7 @@ export default [
   ...acme.configs['flat/react'],
   ...acme.configs['flat/typescript'],
   {
+    name: 'acme/apps/tailwindcss',
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
@@ -22,12 +23,14 @@ export default [
     },
   },
   {
+    name: 'acme/apps/tailwindcss/pages',
     files: ['pages/**/*.{ts,tsx}', '*.d.ts'],
     rules: {
       'import-x/no-default-export': 0,
     },
   },
   {
+    name: 'acme/apps/tailwindcss/ignores',
     ignores: [
       'out',
       '.next',

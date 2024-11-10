@@ -1,16 +1,10 @@
 {
-  "extends": "@acme/ts-config/base.json",
+  "extends": ["@acme/ts-config/base.json"],
   "compilerOptions": {
     "baseUrl": "./",
-    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
     "paths": {
       "~/*": ["./src/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "out", ".next"]

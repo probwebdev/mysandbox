@@ -24,25 +24,25 @@
     "lint:js:inspector": "pnpm dlx @eslint/config-inspector@latest"
   },
   "dependencies": {
-    "next": "~14.2.11",
-    "react": "~18.3.1",
-    "react-dom": "~18.3.1"
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:^",
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@next/bundle-analyzer": "~14.2.11",
-    "@next/eslint-plugin-next": "~14.2.11",
-    "@types/css-font-loading-module": "^0.0.13",
-    "@vanilla-extract/css": "^1.15.5",
-    "@vanilla-extract/next-plugin": "^2.4.5",
+    "@next/bundle-analyzer": "catalog:",
+    "@next/eslint-plugin-next": "catalog:",
+    "@types/css-font-loading-module": "^0.0.14",
+    "@vanilla-extract/css": "^1.16.0",
+    "@vanilla-extract/next-plugin": "^2.4.6",
     "@vanilla-extract/recipes": "^0.5.5",
     "@vanilla-extract/sprinkles": "^1.6.3",
-    "eslint-config-next": "~14.2.11",
-    "typescript": "~5.6.2",
-    "webpack": "^5.94.0"
+    "eslint-config-next": "catalog:",
+    "typescript": "catalog:",
+    "webpack": "^5.96.1"
   },
   "browserslist": [
     "last 2 versions",

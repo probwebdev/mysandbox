@@ -1,8 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import '~/css/core.css';
-
+import '../src/css/core.css';
 import { FontFaceLoader } from '~/components/FontFaceLoader';
 import { ThemeProvider } from '~/theme/ThemeProvider';
 
