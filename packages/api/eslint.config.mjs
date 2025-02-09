@@ -16,4 +16,8 @@ export default [
       ],
     },
   },
+  {
+    name: 'acme/packages/api/ignores',
+    ignores: ['*.config.mjs', '.lintstagedrc.mjs'],
+  },
 ];

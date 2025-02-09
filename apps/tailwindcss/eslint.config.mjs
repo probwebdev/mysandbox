@@ -35,6 +35,8 @@ export default [
       'out',
       '.next',
       '*.setup.js',
+      '*.config.mjs',
+      '.lintstagedrc.mjs',
       '*Mock.js',
       'coverage',
       'next-env.d.ts',

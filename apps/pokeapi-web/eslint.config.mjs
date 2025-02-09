@@ -7,7 +7,7 @@ export default [
   ...acme.configs['flat/react'],
   ...acme.configs['flat/typescript'],
   {
-    name: 'acme/apps/tailwindcss',
+    name: 'acme/apps/pokeapi-web',
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
@@ -23,17 +23,19 @@ export default [
     },
   },
   {
-    name: 'acme/apps/tailwindcss/pages',
+    name: 'acme/apps/pokeapi-web/pages',
     files: ['pages/**/*.{ts,tsx}', '*.d.ts'],
     rules: {
       'import-x/no-default-export': 0,
     },
   },
   {
-    name: 'acme/apps/tailwindcss/ignores',
+    name: 'acme/apps/pokeapi-web/ignores',
     ignores: [
       'out',
       '.next',
+      '*.config.mjs',
+      '.lintstagedrc.mjs',
       '*.setup.js',
       '*Mock.js',
       'coverage',

@@ -6,7 +6,8 @@ export default [
     ignores: [
       'out',
       '.next',
-      '*config.mjs',
+      '.lintstagedrc.mjs',
+      '*.config.mjs',
       '*.config.js',
       '*.setup.js',
       '*Mock.js',

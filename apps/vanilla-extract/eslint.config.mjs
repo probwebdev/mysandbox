@@ -5,6 +5,7 @@ export default [
   ...acme.configs['flat/react'],
   ...acme.configs['flat/typescript'],
   {
+    name: 'acme/apps/vanilla-extract',
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
@@ -24,9 +25,12 @@ export default [
     },
   },
   {
+    name: 'acme/apps/vanilla-extract/ignores',
     ignores: [
       'out',
       '.next',
+      '*.config.mjs',
+      '.lintstagedrc.mjs',
       '*.setup.js',
       '*Mock.js',
       'coverage',
