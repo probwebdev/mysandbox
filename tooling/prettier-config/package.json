@@ -12,9 +12,9 @@
   ],
   "main": "index.mjs",
   "peerDependencies": {
-    "prettier": "^3.4.2"
+    "prettier": "^3.5.3"
   },
   "dependencies": {
-    "prettier": "^3.5.0"
+    "prettier": "^3.5.3"
   }
 }

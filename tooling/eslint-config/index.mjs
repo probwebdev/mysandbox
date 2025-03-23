@@ -1,10 +1,9 @@
 import globals from 'globals';
 import eslint from '@eslint/js';
-import { fixupPluginRules } from '@eslint/compat';
+import prettier from 'eslint-config-prettier/flat';
 import stylistic from '@stylistic/eslint-plugin';
 import node from 'eslint-plugin-n';
 import importX from 'eslint-plugin-import-x';
-import prettier from 'eslint-plugin-prettier/recommended';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import promise from 'eslint-plugin-promise';
@@ -98,21 +97,11 @@ const commonConfig = {
 const reactConfig = {
   name: 'acme/flat/react',
   files: ['**/*.{jsx,tsx}'],
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-  },
+  ...react.configs.flat.recommended,
   settings: {
     react: {
       version: 'detect',
     },
-  },
-  plugins: {
-    react,
-    'react-hooks': fixupPluginRules(reactHooks),
   },
   rules: {
     'react/function-component-definition': [
@@ -128,7 +117,6 @@ const reactConfig = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-props-no-spreading': 0,
     'react/require-default-props': 0,
-    ...reactHooks.configs.recommended.rules,
   },
 };
 
@@ -215,18 +203,22 @@ export default {
   configs: {
     'flat/recommended': [
       {
-        name: 'eslint/flat/recommended',
         ...eslint.configs.recommended,
+        name: 'eslint/flat/recommended',
       },
       node.configs['flat/recommended'],
       promise.configs['flat/recommended'],
       {
-        name: 'prettier/flat/recommended',
         ...prettier,
+        name: 'prettier/flat/recommended',
       },
       commonConfig,
     ],
-    'flat/react': [jsxA11y.flatConfigs.recommended, reactConfig],
+    'flat/react': [
+      reactHooks.configs['recommended-latest'],
+      jsxA11y.flatConfigs.recommended,
+      reactConfig,
+    ],
     'flat/typescript': [
       ...typescript.configs.strict,
       ...typescript.configs.stylistic.filter(({ name = '' }) =>

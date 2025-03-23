@@ -1,13 +1,14 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
-  - 'tooling/*'
-
+  - apps/*
+  - packages/*
+  - tooling/*
 catalog:
   react: ~18.3.1
   react-dom: ~18.3.1
-  typescript: ~5.6.3
-  next: ~15.1.6
-  "@next/bundle-analyzer": ~15.1.6
-  "@next/eslint-plugin-next": ~15.1.6
-  eslint-config-next: ~15.1.6
+  typescript: ~5.8.2
+  next: ~15.2.3
+  '@next/bundle-analyzer': ~15.2.3
+  '@next/eslint-plugin-next': ~15.2.3
+  eslint-config-next: ~15.2.3
+onlyBuiltDependencies:
+  - esbuild
