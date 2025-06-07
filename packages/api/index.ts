@@ -1,3 +1,2 @@
-export { appRouter, type AppRouter } from './src/root';
-export { trpcNextHandler } from './src/adapters/next';
+export { appRouter, type AppRouter, trpcNextHandler } from './src/root';
 export type * from 'pokenode-ts';

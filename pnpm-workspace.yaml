@@ -3,12 +3,13 @@ packages:
   - packages/*
   - tooling/*
 catalog:
-  react: ~18.3.1
-  react-dom: ~18.3.1
-  typescript: ~5.8.2
-  next: ~15.2.3
-  '@next/bundle-analyzer': ~15.2.3
-  '@next/eslint-plugin-next': ~15.2.3
-  eslint-config-next: ~15.2.3
+  react: ~19.1.0
+  react-dom: ~19.1.0
+  typescript: ~5.8.3
+  next: ~15.3.3
+  '@next/bundle-analyzer': ~15.3.3
+  '@next/eslint-plugin-next': ~15.3.3
+  eslint-config-next: ~15.3.3
 onlyBuiltDependencies:
   - esbuild
+  - unrs-resolver

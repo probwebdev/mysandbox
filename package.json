@@ -34,15 +34,15 @@
     "@acme/lint-staged-config": "workspace:^",
     "@acme/prettier-config": "workspace:^",
     "@acme/ts-config": "workspace:^",
-    "@types/node": "^22.13.11",
-    "@types/react": "^18.3.19",
-    "@types/react-dom": "^18.3.5",
-    "eslint": "^9.23.0",
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.28.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
-    "stylelint": "^16.16.0",
-    "turbo": "^2.4.4",
+    "stylelint": "^16.20.0",
+    "turbo": "^2.5.4",
     "typescript": "catalog:"
   },
   "pnpm": {
@@ -52,12 +52,18 @@
         "prettier",
         "stylelint"
       ]
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@vercel/speed-insights",
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
   },
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.11.1",
   "engines": {
-    "node": ">=22.14.0",
-    "pnpm": ">=10.6.0"
+    "node": ">=22.16.0",
+    "pnpm": ">=10.11.0"
   },
   "repository": {
     "type": "git",
